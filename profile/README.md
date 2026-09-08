@@ -16,7 +16,7 @@ During this time, it is sensible for you to not consume any ESPressio libraries 
 
 The process was aiming to complete sooner (29th August 2026), however, tests and audits have uncovered significant optimisations that simply MUST be implemented before we can honestly consider ESPressio ready for production environments... and so we shall continue until this work is completed.
 
-The current target completion date is: **Saturday, 5th September 2026**
+The current target completion date is: **Saturday, 12th September 2026**
 <!--
 # ESPressio Development Platform
 ## Designed for ESP32 - with every intention to grow beyond!
