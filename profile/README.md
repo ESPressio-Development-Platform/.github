@@ -1,6 +1,8 @@
 # CRITICAL INFORMATION:
 **Architectural Alignment and Hardening is currently taking place... please do not consume the ESPressio Development Platform until this message has been removed!**
 
+**Saturday 12th September 2026 UPDATE: The platform-wide architectural alignment and hardening process is currently taking place following the most aggressive week-long design audit and painstaking redesign. We’re getting very close to release-ready!**
+
 In order to make ESPressio Development Platform (EDP) fully stable and production-ready, an extensive process is underway at this time to:
 - Finalise the overall architecture of the current ESPressio feature-set
 - Perform exhaustive optimisations across the entire suite of Platform Libraries
