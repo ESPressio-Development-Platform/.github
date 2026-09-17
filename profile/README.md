@@ -1,31 +1,38 @@
 # CRITICAL INFORMATION:
-**Architectural Alignment and Hardening is currently taking place... please do not consume the ESPressio Development Platform until this message has been removed!**
+**This platform is under serious active development, and is NOT ready for production use!**
 
-**Saturday 12th September 2026 UPDATE: The platform-wide architectural alignment and hardening process is currently taking place following the most aggressive week-long design audit and painstaking redesign. We’re getting very close to release-ready!**
+The changes being prepared right now are designed to not only harden the platform, but to ensure that it meets extremely strict memory allocation constraints across the broadest possible scope of ESP32 variants.
 
-In order to make ESPressio Development Platform (EDP) fully stable and production-ready, an extensive process is underway at this time to:
-- Finalise the overall architecture of the current ESPressio feature-set
-- Perform exhaustive optimisations across the entire suite of Platform Libraries
-- Ensure Abstraction is fully maturated, and that now architecture/device-specific calls or references remain in the downstream ESPressio libraries (all such cases will become consumers of the `ESPressio System` library, which itself is being extended to translate hardware/system-specific references/calls into ESPressio-generic language).
-- Ensure maximum stability across ESP32 devices, specifically targeting the ESP32 Pico as the lowest supportable chipset target.
-- Soak test every feature, including Saturation Testing for transmission, reception, and processing of each Core Primitive (Command, Event, State)
+This work is not easy, but the goal is to ensure that an application can be built using the full ESPressio platform stack, on the smallest possible ESP32 variant.
 
-To put it simply: we're making the ESPressio Development Platform (EDP) production ready and hardened!
+To meet the minimum acceptance criteria for full public (production-worthy) release, the minimum required stack must include:
+- Primitives:
+  - Command (at least 5 concurrently registered with Transmission support bindings)
+  - Event (at least 5 concurrently registered with Transmission support bindings)
+  - State (at least 5 concurrently registered with Transmission support bindings)
+- Radio (one of, minimum):
+  - Raw 802.11
+  - BLE
+  - NRF24
+- Mesh (with minimum of)
+  - 20 concurrent Nodes supportable
+  - Clock Synchronisation to <1ms precision
+- WiFi
+  - AP until Client mode (runs as its own Access Point until connected as a Client to another WiFi Access Point)
+- Web
+  - Web UI
+  - WebSocket with support for all Primitives
+  - REST API host (with support for all Primitives)
+- Persisted Configuration Storage (and retreival)
+- OTA Updates
+  - Full failsafe rollback in the event of power loss or update failure
+  - Full verification of firmware metadata and binary to ensure applicability and legitimacy before being accepted for update
+  - Means to obtain updates from:
+    - File upload via Web UI
+    - Propagation of Firmware Updates via Mesh (transmission and reception)
+    - Obtain from Web Server over HTTP/HTTPS
+    - Any valid Binary Stream as a source (regardless of transport)
 
-As part of this process, the exceptional decision has been made to withdraw all previous releases (all of which have been pre-production releases for internal testing) and - once the process is complete - release every ESPressio library as a new 1.0.0 initial, production-ready and hardened release!
+Once these conditions are met on (in the VERY LEAST) the original ESP32-WROOM-32 MCU, with stability and reliability, the platform will be considered ready for a production release.
 
-During this time, it is sensible for you to not consume any ESPressio libraries in your own code, as we will be breaking a lot of interfaces, moving a lot of code between libraries (abstracting), and performing full-suite integration tests at an extremely rapid rate.
-
-The process was aiming to complete sooner (29th August 2026), however, tests and audits have uncovered significant optimisations that simply MUST be implemented before we can honestly consider ESPressio ready for production environments... and so we shall continue until this work is completed.
-
-The current target completion date is: **Saturday, 12th September 2026**
-<!--
-# ESPressio Development Platform
-## Designed for ESP32 - with every intention to grow beyond!
-ESPressio Development Platform (EDP) is designed specifically to abstract the complexities of foundational hardware implementation from _your_ Application code.
-
-EDP achieves this by taking care of the following complexities for you, while providing an easy-to-understand abstraction interface (API) against which your own Application's code can consume:
-- Threads: enables your Applications to leverage the full power of its underlying Microcontroller, without the need for your code to make a single hardware-level instruction call or reference!
-- Events: enables your Applications to decouple logic, and operate Asynchronously, simply by defining a suitable Event Type to contain relevant information, dispatch it through ESPressio's integrated Event Engine, then for separate modules of your code to operate against these dispatched Events at their own discretion. **Events can be transmitted across Sockets and even across multiple Devices via Network and/or Radio!**
-- 
--->
+Meanwhile, feel free to follow this post, the repositories, our official Discord channel, and our official Instagram channel to stay updated on our progress.
