@@ -1,38 +1,11 @@
-# CRITICAL INFORMATION:
-**This platform is under serious active development, and is NOT ready for production use!**
+# Update - Saturday 19th September 2026 -
 
-The changes being prepared right now are designed to not only harden the platform, but to ensure that it meets extremely strict memory allocation constraints across the broadest possible scope of ESP32 variants.
+As ESPressio matures towards it's first production-ready release incarnation, it is absolutely crucial that **nobody attempt to use the current, published, public ESPressio-\* libraries in any production-intended projects.**
 
-This work is not easy, but the goal is to ensure that an application can be built using the full ESPressio platform stack, on the smallest possible ESP32 variant.
+Everything from the present publicly-visible libraries is going to be replaced by a new, stronger, consistent, and *fully deterministic* platform (the present repositories will ultimately be withdrawn and replaced).
 
-To meet the minimum acceptance criteria for full public (production-worthy) release, the minimum required stack must include:
-- Primitives:
-  - Command (at least 5 concurrently registered with Transmission support bindings)
-  - Event (at least 5 concurrently registered with Transmission support bindings)
-  - State (at least 5 concurrently registered with Transmission support bindings)
-- Radio (one of, minimum):
-  - Raw 802.11
-  - BLE
-  - NRF24
-- Mesh (with minimum of)
-  - 20 concurrent Nodes supportable
-  - Clock Synchronisation to <1ms precision
-- WiFi
-  - AP until Client mode (runs as its own Access Point until connected as a Client to another WiFi Access Point)
-- Web
-  - Web UI
-  - WebSocket with support for all Primitives
-  - REST API host (with support for all Primitives)
-- Persisted Configuration Storage (and retreival)
-- OTA Updates
-  - Full failsafe rollback in the event of power loss or update failure
-  - Full verification of firmware metadata and binary to ensure applicability and legitimacy before being accepted for update
-  - Means to obtain updates from:
-    - File upload via Web UI
-    - Propagation of Firmware Updates via Mesh (transmission and reception)
-    - Obtain from Web Server over HTTP/HTTPS
-    - Any valid Binary Stream as a source (regardless of transport)
+The new platform follows an extremely robust design, which has been formulated over the past 3 months and is now being implemented.
 
-Once these conditions are met on (in the VERY LEAST) the original ESP32-WROOM-32 MCU, with stability and reliability, the platform will be considered ready for a production release.
+The repositories containing the new design will become visible the moment that the first production-ready release is completed (hopefully within the next 2-3 weeks, I'll provide more concrete release expectations once I can reasonably be certain that they are achievable).
 
-Meanwhile, feel free to follow this post, the repositories, our official Discord channel, and our official Instagram channel to stay updated on our progress.
+In the meantime, **do not build a dependency on the current, public ESPressio-\* libraries in this organisation.
