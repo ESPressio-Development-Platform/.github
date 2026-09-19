@@ -9,3 +9,7 @@ The new platform follows an extremely robust design, which has been formulated o
 The repositories containing the new design will become visible the moment that the first production-ready release is completed (hopefully within the next 2-3 weeks, I'll provide more concrete release expectations once I can reasonably be certain that they are achievable).
 
 In the meantime, **do not build a dependency on the current, public ESPressio-\* libraries in this organisation.
+
+# Update 2 - Saturday 19th September 2026 -
+
+I have temporarily made private the ESPressio libraries to prevent anyone from inadvertently consuming them with their present interfaces (API), as the entire interface, API, and Bootstrap methodology is going to change on a fundamental level.
