@@ -1,3 +1,20 @@
+# Update - Sunday 27th September 2026 -
+
+Considerable progress has been made with the full architectural redevelopment of ESPressio!
+
+You will notice that a significant number of the libraries are now public again (with their new `EDP-*` prefixing) and these comprise much of the core platform facilities.
+
+They also introduce entirely new functionality, tested and proven to work exactly as desired.
+
+However... the 1.0.0 release is not yet ready. This is because there are a number of other libraries in development right now, some of which include the `Application` layer (which itself provides `Application Mode`, enabling you to easily and intuitively produce Applications which can operate in different modes depending on your needs... including OTA Update mode, Diagnostics Mode - should you require one - the standard operating mode, and any other modes you may need).
+The idea is that your Application will Bootstrap the components it requires to operate in any given Mode, in the correct order, and exclude anything that the given Application Mode does not require.
+
+At the same time, the `Primitive` types (`Command`, `Event`, `State` and a new type called `Request` - which is specifically designed to ask for any available participating Node on a Mesh to perform a discrete unit of processing, allowing your Application to distribute its workload based on available Idle Capacity across an entire Mesh) are being actively developed and prepared for imminent release.
+
+In parallel, the Radio and Mesh libraries are being redeveloped against the new Architecture.
+
+There is still much to be done, but progress is being made, the pace is accelerating, and we look forward to demonstrating the complete Platform very soon.
+
 # Update - Wednesday 23rd September 2026 -
 
 The feature set for the V1 release has now been decided (and, therefore, the final scope of initial development):
