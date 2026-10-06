@@ -1,3 +1,17 @@
+# Update - Tuesday October 6th 2026 -
+
+You may have noticed a number of ESPressio libraries are once again publicly visible.
+This is because the platform is moving forwards at a considerable pace, with the new (considerably faster, more efficient, less memory-intensive) Mesh system entering its final lab testing stage today... with public release expected this week!
+
+Testing is taking place on a laboratory testing system providing 20x ESP32-WROOM-32 Development Boards, 2x M5StickC-Plus 2 development devices, 2x M5Stack StopWatch (ESP32-S3) devices, and - eventually - 8x Arduino Nano development boards fitted with NRF24 radio modules.
+The objective is to provide full, multi-modal *seamless* Mesh connectivity, with consistent performance and full sub-millisecond clock synchronisation across not only devices, but across architectures as well.
+
+The newly-published ESPressio libraries already massively outperform the original libraries (which were withdrawn for the sake of this fundamental platform redevelopment, with its new - fully bounded - architecture) in both compute speeds *and* memory utilisation requirements. They do far more while using far less memory!
+
+For the first time, the Localisation platform has also been published for public use. This enables you to not only provide language-localised Strings for international users, but eliminates the need to embed Strings in your program itself! This reduces memory requirements as well as the size of your binaries.
+
+A lot is coming up... so stay tuned for more updates, or join our Discord channel if you want to discuss things actively.
+
 # Update - Sunday 27th September 2026 -
 
 Considerable progress has been made with the full architectural redevelopment of ESPressio!
