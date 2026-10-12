@@ -1,3 +1,22 @@
+# Update - Monday October 12th 2026 -
+
+While you may not have seen much published for public consumption over the past week, I want to assure you that much has been accomplished in that time, and will be released very soon.
+
+The new Mesh architecture is being exhaustively tested in our Lab, and while it is performing very well (providing extremely stable and reliable communication even with excessively heavy loads across up to 20 nodes concurrently) we have an absolute requirement that the Mesh must support clock synchronisation across all devices maintaining a precision below 1ms. We're close to that, but there are a few issues that need to be resolved to make the timing reliable and sustained.
+
+Once that objective is reached, and the subsequent cleanup operation takes place (removing instrumentation from the code etc) a bunch of new libraries will be published for the Mesh architecture itself.
+
+These include radio support for:
+- ESP32's integrated WiFi radio, using Raw 802.11 Radio
+- ESP32's integrated BLE radio
+- the NRF24L01/+ radio modules
+
+Thereafter, work will immediately seek to conclude on the WiFi and Web libraries, which then enable ESPressio-based applications to provide integrated Web UIs, Socket connectivity, RESTful Server/Client, SQS and a whole bunch of other universally-useful features.
+
+Once that is in place, a special library for NeoPixel LEDs will be released (we use them extensively in our own products)
+
+Thereafter, much more will follow.
+
 # Update - Tuesday October 6th 2026 -
 
 You may have noticed a number of ESPressio libraries are once again publicly visible.
