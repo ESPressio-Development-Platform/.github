@@ -1,3 +1,4 @@
+![image](https://github.com/ESPressio-Development-Platform/.github/blob/bf69152cae7291af7d0b5a1c928eab01f762da2b/profile/ESPressio_%20Brew%20Connected%20Ideas.png)
 # Update - Thursday October 22nd 2026 -
 
 Mesh is undergoing its Full Integration Testing process across many ESP32 Nodes, while further refinements to <1ms clock synchronisation reliability continue.
