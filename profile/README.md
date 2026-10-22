@@ -1,3 +1,12 @@
+# Update - Thursday October 22nd 2026 -
+
+Mesh is undergoing its Full Integration Testing process across many ESP32 Nodes, while further refinements to <1ms clock synchronisation reliability continue.
+
+The new String-free `Logging` library is progressing smoothly, and should be ready for release this week. This uses `EDP-Localisation` to resolve language-localised Strings for each Log entry, and includes Python-based tooling to Decode logs (both in real-time via Serial, or retrospectively from stored Log Files downloaded from a device).
+As a result, rich and robust logging is now possible with a remarkably small memory/storage footprint.
+
+A comprehensive Demo Suite is being prepared for the full 1.0.0 release, showcasing each individual feature of ESPressio so far, as well as a few hardware-specific rich demos showcasing capability when combining ESPressio features to produce complete applications.
+
 # Update - Monday October 12th 2026 -
 
 While you may not have seen much published for public consumption over the past week, I want to assure you that much has been accomplished in that time, and will be released very soon.
