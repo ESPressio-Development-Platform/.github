@@ -1,4 +1,16 @@
 ![image](https://github.com/ESPressio-Development-Platform/.github/blob/bf69152cae7291af7d0b5a1c928eab01f762da2b/profile/ESPressio_%20Brew%20Connected%20Ideas.png)
+# Update - Thursday November 12th 2026 -
+
+Work progresses at a fair pace, with soak testing, durability testing, and appropriate final refinements taking place as necessary.
+
+For the purpose of facilitating more robust and efficient testing, two new libraries have been introduced (behind the scenes for the moment, to be released publicly once they themselves have been suitably hardened for production-worthiness).
+
+**Logging** provides ultra-lightweight, power-loss durable, multi-sink logging capabilities for embedded applications, which leverages `EDP-Localisation` to entirely eliminate the need to persist Strings, while also providing the means to decode logged information into ANY application-supported language you wish.
+
+**Profiling** provides lightweight, power-loss durable, multi-sink profiling capabilities for embedded applications. This means that extremely accurate timing information can be captured, analysed, and leveraged to improve and optimise the performance of your embedded applications.
+
+These libraries have been introduced so that we can ensure that ESPressio itself is durable, performant, and safe... but their demonstrated value can clearly be of use for your own applications, therefore they shall be promoted from internal tooling to public facilities.
+
 # Update - Thursday October 22nd 2026 -
 
 Mesh is undergoing its Full Integration Testing process across many ESP32 Nodes, while further refinements to <1ms clock synchronisation reliability continue.
